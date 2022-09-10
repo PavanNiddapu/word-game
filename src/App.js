@@ -51,10 +51,17 @@ function App() {
     window.location.reload(false)
   }
 
+  const onChangeCsvHandler = (event) => {
+    const csvInput = event.target.value.trim()
+    if (csvInput && csvInput.length > 0) {
+      setCsv(event.target.value)
+    }
+  }
+
   return (<div className=''>
     <form id="form1" onSubmit={setCSVInput}>
       <label>Use comma seperated words as input. Eg: Apple,Ball </label>
-      <input type="text" id="csvInput" onChange={event => setCsv(event.target.value)} />
+      <input type="text" id="csvInput" onChange={onChangeCsvHandler} />
       <input type='submit' className='button' value="Submit" />
     </form>
     {words.length == 0 && <label>No words available...use above box to fill words</label>}
