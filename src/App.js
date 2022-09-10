@@ -55,7 +55,7 @@ function App() {
     <form id="form1" onSubmit={setCSVInput}>
       <label>Use comma seperated words as input. Eg: Apple,Ball </label>
       <input type="text" onChange={event => setCsv(event.target.value)} />
-      <input type='submit' value="Submit" />
+      <input type='submit' className='button' value="Submit" />
     </form>
     {words.length == 0 && <label>No words available...use above box to fill words</label>}
     {words.length > 0 && <PlayWord aWord={words.pop()} doNext={onNextHandler} />}
@@ -77,4 +77,4 @@ export default App;
 // In case of wrong answer show a retry button - Done
 // Also show expected reverse word in case of wrong answer - Done
 // Have timer for the flash and display the numbers 3
-// Have proper coloring,margin of buttons and lables 
+// Have proper coloring,margin of buttons and lables - Done

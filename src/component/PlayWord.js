@@ -29,7 +29,7 @@ const PlayWord = (props) => {
             <div className='flash'>{props.aWord} </div>
 
             {!enteredWord && <WordForm word={props.aWord} validate={validateOnSubmit} />}
-            {isWordValid && <div>Correct<button onClick={playNextWord} >Next Word</button> </div>}
+            {isWordValid && <div><label id="correctLabel">Correct</label><button onClick={playNextWord} >Next Word</button></div>}
             {enteredWord && !isWordValid && <WrongWord enteredWord={enteredWord} aWord={props.aWord} />}
         </div>
     )

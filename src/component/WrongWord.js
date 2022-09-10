@@ -16,7 +16,7 @@ const WrongWord = (props) => {
     }
     return (
         <div>
-            <div>You have entered wrong word</div>
+            <label id="wrongLabel">You have entered wrong word</label>
             <div>
                 <label>Entered Word..</label>
                 <Word word={props.enteredWord} />
