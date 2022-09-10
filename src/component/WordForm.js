@@ -19,7 +19,7 @@ const WordForm = (props) => {
         })
     }
 
-    return (<form className='conatiner' onSubmit={submitHandler}>
+    return (<form className='conatiner' id="form" onSubmit={submitHandler}>
         {Array(props.word.length).fill(1).map((el, i) =>
             <input className='letter-input' key={i} data-key={i} maxLength="1" type="text" onChange={letterChangeHandler} />
         )}
