@@ -75,5 +75,6 @@ export default App;
   // - Pop the word from local storage and display - Done
   // - Only set storage if the csv lenght is greater than 0 - Done
 // In case of wrong answer show a retry button - Done
+// Also show expected reverse word in case of wrong answer - Done
 // Have timer for the flash and display the numbers 3
-// Have proper coloring
+// Have proper coloring,margin of buttons and lables 
