@@ -23,7 +23,7 @@ const WordForm = (props) => {
         {Array(props.word.length).fill(1).map((el, i) =>
             <input className='letter-input' key={i} data-key={i} maxLength="1" type="text" onChange={letterChangeHandler} />
         )}
-        <input type="submit" className="button" value="Press enter reverse word and press enter" />
+        <input type="submit" className="button" value="Enter reverse word and press enter" />
     </form>)
 }
 
