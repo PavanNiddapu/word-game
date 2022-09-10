@@ -74,6 +74,6 @@ export default App;
   // - display PlayWord if there is min a word in local storage - Done
   // - Pop the word from local storage and display - Done
   // - Only set storage if the csv lenght is greater than 0 - Done
-// In case of wrong answer show a retry button 
+// In case of wrong answer show a retry button - Done
 // Have timer for the flash and display the numbers 3
 // Have proper coloring

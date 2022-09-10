@@ -4,6 +4,9 @@ import Word from "./Word";
 
 
 const WrongWord = (props) => {
+    const retryHandler = () => {
+        window.location.reload(false)
+    }
     return (
         <div>
             <div>You have entered wrong word</div>
@@ -15,8 +18,7 @@ const WrongWord = (props) => {
                 <label>Actual Word..</label>
                 <Word word={props.aWord} />
             </div>
-            {/* <EnteredWord label="Entered Word.." word={props.enteredWord} />
-            <EnteredWord label="Actual Word.." word={props.aWord} /> */}
+            <button id="retry" onClick={retryHandler}>Retry</button>
         </div >
     )
 }
