@@ -1,12 +1,12 @@
 #form {
-    animation: fade 0s ease-in-out 3s backwards;
+    animation: fade 0s ease-in-out 4s backwards;
 }
 
 .flash {
     font-weight: normal;
     font-size: 50px;
     color: violet;
-    animation: fade 0s ease-in-out 3s forwards;
+    animation: fade 0s ease-in-out 4s forwards;
     text-transform: uppercase;
 }
 

@@ -54,7 +54,7 @@ function App() {
   const onChangeCsvHandler = (event) => {
     const csvInput = event.target.value.trim()
     if (csvInput && csvInput.length > 0) {
-      setCsv(event.target.value)
+      setCsv(csvInput)
     }
   }
 
@@ -83,6 +83,6 @@ export default App;
   // - Only set storage if the csv lenght is greater than 0 - Done
 // In case of wrong answer show a retry button - Done
 // Also show expected reverse word in case of wrong answer - Done
-// Have timer for the flash and display the numbers 3
-// Make the Csv input wider
+// Have label, timer for the flash and display the numbers 3
+// Make the Csv input wider - Done
 // Have proper coloring,margin of buttons and lables - Done

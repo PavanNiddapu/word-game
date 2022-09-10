@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from 'react';
 import WordForm from './WordForm';
 import WrongWord from './WrongWord';
@@ -26,7 +26,11 @@ const PlayWord = (props) => {
 
     return (
         <div className=''>
-            <div className='flash'>{props.aWord} </div>
+            <div className='flash'>
+                <label>word will disappear in 4 sec</label>
+                <br></br>
+                {props.aWord}
+            </div>
 
             {!enteredWord && <WordForm word={props.aWord} validate={validateOnSubmit} />}
             {isWordValid && <div><label id="correctLabel">Correct</label><button onClick={playNextWord} >Next Word</button></div>}
