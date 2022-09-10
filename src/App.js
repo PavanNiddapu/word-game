@@ -54,7 +54,7 @@ function App() {
   return (<div className=''>
     <form id="form1" onSubmit={setCSVInput}>
       <label>Use comma seperated words as input. Eg: Apple,Ball </label>
-      <input type="text" onChange={event => setCsv(event.target.value)} />
+      <input type="text" id="csvInput" onChange={event => setCsv(event.target.value)} />
       <input type='submit' className='button' value="Submit" />
     </form>
     {words.length == 0 && <label>No words available...use above box to fill words</label>}
@@ -77,4 +77,5 @@ export default App;
 // In case of wrong answer show a retry button - Done
 // Also show expected reverse word in case of wrong answer - Done
 // Have timer for the flash and display the numbers 3
+// Make the Csv input wider
 // Have proper coloring,margin of buttons and lables - Done

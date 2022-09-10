@@ -55,8 +55,6 @@
 button {
     /* border: none; */
     /* background-color: transparent; */
-    padding: 1px;
-    margin: 5px;
     font-size: 1.5rem;
     /* transition: all .3s ease-in-out; */
     color: #999999;
@@ -66,7 +64,6 @@ button {
 label {
     font-size: 1.5rem;
     color: blue;
-    padding: 5px 5px;
     margin: 5px 5px;
     margin-top: 10px;
 
@@ -78,6 +75,12 @@ label {
 
 #correctLabel {
     color: green;
+}
+
+#csvInput {
+    width: 50%;
+    height: 25px;
+    display: block;
 }
 
 @keyframes fade {
