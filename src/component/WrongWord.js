@@ -1,5 +1,4 @@
 import React from "react";
-import Letter from './Letter';
 import Word from "./Word";
 
 

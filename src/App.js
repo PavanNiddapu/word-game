@@ -5,7 +5,7 @@ import PlayWord from './component/PlayWord';
 
 function App() {
 
-  const aWord = "Cat";
+
   const getStorage = () => {
     return localStorage.getItem('words')
   }
@@ -64,7 +64,7 @@ function App() {
       <input type="text" id="csvInput" onChange={onChangeCsvHandler} />
       <input type='submit' className='button' value="Submit" />
     </form>
-    {words.length == 0 && <label>No words available...use above box to fill words</label>}
+    {words.length === 0 && <label>No words available...use above box to fill words</label>}
     {words.length > 0 && <PlayWord aWord={words.pop()} doNext={onNextHandler} />}
   </div>);
 }

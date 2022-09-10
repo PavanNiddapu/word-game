@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from 'react';
 import WordForm from './WordForm';
 import WrongWord from './WrongWord';
