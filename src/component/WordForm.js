@@ -7,13 +7,16 @@ const WordForm = (props) => {
 
     const submitHandler = (event) => {
         event.preventDefault();
-        alert(`On Sumbit ${input}`)
+        props.validate(input)
     }
     const letterChangeHandler = (event) => {
         const letter = event.target.value
         const index = event.target.getAttribute('data-key')
         event.preventDefault();
-        setInput((array) => { array[index] = letter; return array })
+        setInput((array) => {
+            array[index] = letter;
+            return array;
+        })
     }
 
     return (<form className='conatiner' onSubmit={submitHandler}>
