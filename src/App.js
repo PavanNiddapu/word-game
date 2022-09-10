@@ -1,35 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
+import PlayWord from './component/PlayWord';
 
-import Word from './component/Word';
-import WordForm from './component/WordForm';
-import WrongWord from './component/WrongWord';
 
 function App() {
-  const [enteredWord, setEnteredWord] = useState()
-  const [isWordValid, setIsWordValid] = useState()
-  const validateOnSubmit = (letterArray) => {
-    let enteredWord = letterArray.join("").toUpperCase()
-    letterArray = [...letterArray].reverse()
-    let actualWord = letterArray.join("").toUpperCase()
-    setEnteredWord(enteredWord)
-    if (actualWord === aWord.toUpperCase()) {
-      setIsWordValid(true)
-    } else {
-      console.log(`Not valid as ${letterArray.join("").toUpperCase()}`)
-      setIsWordValid(false)
-    }
-  }
 
-  const aWord = "RAW";
+  const aWord = "Cat";
   return (<div className=''>
-    <div className='flash'>{aWord} </div>
-
-    {!enteredWord && <WordForm word={aWord} validate={validateOnSubmit} />}
-    {isWordValid && <div>Correct</div>}
-    {enteredWord && !isWordValid && <WrongWord enteredWord={enteredWord} aWord={aWord} />}
-
-
+    <PlayWord aWord={aWord} />
   </div>);
 }
 
