@@ -20,12 +20,16 @@ const PlayWord = (props) => {
         }
     }
 
+    const playNextWord = () => {
+        props.doNext()
+    }
+
     return (
         <div className=''>
             <div className='flash'>{props.aWord} </div>
 
             {!enteredWord && <WordForm word={props.aWord} validate={validateOnSubmit} />}
-            {isWordValid && <div>Correct</div>}
+            {isWordValid && <div>Correct<button onClick={playNextWord} >Next Word</button> </div>}
             {enteredWord && !isWordValid && <WrongWord enteredWord={enteredWord} aWord={props.aWord} />}
         </div>
     )
