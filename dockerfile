@@ -1,7 +1,9 @@
-# Container image that runs your code
-FROM alpine:3.10
-
-# Copies your code file from your action repository to the filesystem path `/` of the container
-COPY entrypoint.sh /entrypoint.sh
-
-RUN ./entrypoint.sh
+FROM node:14-alpine
+WORKDIR /app
+COPY package.json ./
+COPY package-lock.json ./
+COPY ./ ./
+RUN npm i
+RUN npm run build
+RUN npm install -g serve 
+CMD ["serve", "-s", "build"]
